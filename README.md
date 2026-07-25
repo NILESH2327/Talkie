@@ -44,12 +44,6 @@ A modern real-time chat application built using the MERN Stack with Socket.IO, a
 
 ---
 
-## Profile Page
-
-![Profile](./screenshots/profile.png)
-
----
-
 # 🛠 Tech Stack
 
 ### Frontend
