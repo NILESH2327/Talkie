@@ -6,9 +6,11 @@ let io;
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173",
+      origin: process.env.FRONTEND_URL || "https://talkie-two-amber.vercel.app",
       credentials: true,
+      methods: ["GET", "POST"],
     },
+    transports: ["websocket", "polling"], // ✅ Deployment handshakes stability ke liye
   });
 
   io.on("connection", (socket) => {

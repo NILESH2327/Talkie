@@ -10,6 +10,7 @@ export const connectSocket = (userId) => {
     {
       query: { userId },
       withCredentials: true,
+      transports: ["websocket", "polling"], // ✅ Cross-domain WebSocket reliability fix
     }
   );
 
